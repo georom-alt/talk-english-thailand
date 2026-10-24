@@ -1,0 +1,18 @@
+{
+  "country": "Thailand",
+  "slug": "thailand",
+  "lang": "th",
+  "domain": "poodloei.com",
+  "advisor": "Ploy",
+  "title": "Student Success Advisor in Thailand",
+  "zone": "Asia/Bangkok",
+  "zoneLabel": "ICT - Bangkok (UTC+7)",
+  "single": 300,
+  "bundle": 1050,
+  "currency": "THB",
+  "locale": "th_TH",
+  "info": "info@poodloei.com",
+  "teacher": "george@poodloei.com",
+  "whatsapp": "16475512695",
+  "release": "20261023-parity-v1"
+}
