@@ -1,0 +1,9 @@
+{
+  "menu": "passed",
+  "profile_open_close": "passed",
+  "assessment_attempt_history": "passed",
+  "optional_registration_assessment": "passed",
+  "country_timezone_options": "passed",
+  "advisor_source_in_preview_and_whatsapp": "passed",
+  "visual_rendering": "not run"
+}
