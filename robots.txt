@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /student/
+Sitemap: https://poodloei.com/sitemap.xml
