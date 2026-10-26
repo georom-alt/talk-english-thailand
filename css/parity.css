@@ -1,0 +1,44 @@
+/* Original reference stylesheet remains authoritative. These rules only fit
+   retained local forms, commercial offers and translated text. */
+[hidden]{display:none!important}
+.container{width:min(100%,var(--max-width));margin-inline:auto}
+.soft-section{background:var(--off-white)}
+.action-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.small-note{font-size:.86rem;color:var(--muted);line-height:1.7}
+.notice{padding:18px 22px;border-left:4px solid var(--blue);background:var(--blue-light);border-radius:0 10px 10px 0}
+.two-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:30px 0}
+.two-grid article{padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:white}
+#pricing .pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.price-card.featured{border:2px solid var(--red)}
+.price-card .price-amount{font-size:2rem;font-weight:700}
+.assessment-form .field{min-width:0}
+.assessment-form .field>span{font-size:.95rem}
+.assessment-form .button{cursor:pointer}
+.assessment-result{background:var(--blue-light);border-color:var(--blue);color:var(--navy)}
+.result-course{font-size:1.4rem;font-weight:700}
+.preserve-lines{white-space:pre-line}
+.enquiry-form .field{min-width:0}
+.enquiry-form .optional-assessment{min-width:0;padding:18px;border:1px solid var(--border);border-radius:12px;background:white;color:var(--text)}
+.optional-assessment summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.optional-assessment fieldset{border:0;padding:20px 0 0;margin:0}
+.optional-assessment .field,.optional-assessment legend{color:var(--text)}
+.optional-assessment select{border:1px solid #81929b}
+.enquiry-form .consent-row{display:flex;align-items:flex-start;gap:10px;font-weight:400}
+.enquiry-form .consent-row input{width:20px;min-height:20px;height:20px;flex:0 0 20px;padding:0;margin-top:3px}
+#registration-preview{font:inherit;font-size:.85rem;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--text);background:white;padding:18px;border-radius:10px;max-height:500px;overflow:auto}
+#registration-review,#registration-assessment-status,#form-status,.enquiry-form .small-note,.enquiry-form>a{color:white}
+#registration-review summary{cursor:pointer;font-weight:700}
+.honeypot{display:none!important}
+.advisor-disclosure{font-size:.85rem;color:var(--muted)}
+.contact-card .contact-action-box{grid-template-columns:1fr}
+.course-vietnamese{font-size:.85rem;color:var(--muted)}
+html[lang=en] .course-vietnamese{display:none}
+body.modal-open{overflow:hidden}
+.profile-modal [data-profile-close]{cursor:pointer}
+.enquiry-form .button{white-space:normal}
+html[lang=th] body{font-family:Tahoma,"Segoe UI",Arial,sans-serif}
+html[lang=th] h1,html[lang=th] h2{letter-spacing:normal;line-height:1.35}
+@media(min-width:1021px){.header-container{gap:16px}.main-navigation{gap:16px}.main-navigation a{min-width:0;overflow-wrap:normal}.brand{flex-shrink:0}.language-switcher{flex-shrink:0}}
+@media(max-width:1300px){.main-navigation{display:none;position:absolute;top:100%;left:20px;right:20px;flex-direction:column;align-items:stretch;gap:0;padding:14px;background:white;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);max-height:calc(100dvh - 100px);overflow:auto}.main-navigation.is-open{display:flex}.main-navigation a{display:block;padding:12px}.menu-toggle{display:block;flex-shrink:0;margin-left:auto}.language-switcher{flex-shrink:0}}
+@media(max-width:760px){#pricing .pricing-grid,.two-grid{grid-template-columns:1fr}.enquiry-form{grid-template-columns:1fr}.form-full{grid-column:1}.action-row .button{max-width:100%;text-align:center}.enquiry-panel{padding:24px 18px}.hero-actions{flex-wrap:wrap}html[lang=th] .hero h1{font-size:clamp(2.2rem,8vw,3rem)}.optional-assessment{padding:14px}.section .container{min-width:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

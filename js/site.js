@@ -25,12 +25,12 @@ let language=cfg.lang;
 const t=k=>words[k]?.[language]||words[k]?.en||k;
 function setLanguage(lang){
  language=lang===cfg.lang?cfg.lang:'en';document.documentElement.lang=language;
- document.querySelectorAll('[data-i18n]').forEach(e=>{e.textContent=t(e.dataset.i18n);});
+ document.querySelectorAll('[data-i18n]').forEach(e=>{const key=e.dataset.i18n;if(['ref_hero_title','ref_philosophy_title','ref_final_title'].includes(key))e.innerHTML=t(key);else e.textContent=t(key);});
  const heading=document.querySelector('.hero-content h1');
- if(heading){const parts=t('hero').match(/^(.+?[.!?])\s+(.+)$/);if(parts){heading.replaceChildren(document.createTextNode(parts[1]));const accent=document.createElement('span');accent.textContent=parts[2];heading.append(accent);}else if(language==='th'){heading.replaceChildren(document.createTextNode('สร้างความมั่นใจ'));const accent=document.createElement('span');accent.textContent='เปิดโอกาสใหม่';heading.append(accent);}}
+ if(heading?.dataset.i18n==='hero'){const parts=t('hero').match(/^(.+?[.!?])\s+(.+)$/);if(parts){heading.replaceChildren(document.createTextNode(parts[1]));const accent=document.createElement('span');accent.textContent=parts[2];heading.append(accent);}else if(language==='th'){heading.replaceChildren(document.createTextNode('สร้างความมั่นใจ'));const accent=document.createElement('span');accent.textContent='เปิดโอกาสใหม่';heading.append(accent);}}
  const trust=document.querySelector('.hero-trust');if(trust){trust.replaceChildren(...t('trust').split('·').map(s=>{const pill=document.createElement('span');pill.textContent='✓ '+s.trim();return pill;}));}
 
- document.querySelectorAll('[data-language]').forEach(e=>e.setAttribute('aria-pressed',String(e.dataset.language===language)));
+ document.querySelectorAll('[data-language]').forEach(e=>{const selected=e.dataset.language===language;e.setAttribute('aria-pressed',String(selected));e.classList.toggle('is-active',selected);});
  document.title=t(document.body.dataset.pageTitle)+' | Talk English '+cfg.country;
  document.querySelector('meta[name="description"]')?.setAttribute('content',t('intro'));
  document.querySelector('meta[property="og:title"]')?.setAttribute('content',document.title);
