@@ -24,7 +24,7 @@ if(!cfg||!words)return;
 let language=cfg.lang;
 const t=k=>words[k]?.[language]||words[k]?.en||k;
 function setLanguage(lang){
- language=lang===cfg.lang?cfg.lang:'en';document.documentElement.lang=language;
+ language=lang===cfg.lang?cfg.lang:'en';document.documentElement.lang=language;document.querySelector('.menu-toggle')?.setAttribute('aria-label',t('menu'));document.querySelector('nav')?.setAttribute('aria-label',language==='th'?'เมนูหลัก':language==='id'?'Navigasi utama':'Main navigation');document.querySelector('.language-switcher')?.setAttribute('aria-label',language==='th'?'ภาษา':language==='id'?'Bahasa':'Language');
  document.querySelectorAll('[data-i18n]').forEach(e=>{const key=e.dataset.i18n;if(['ref_hero_title','ref_philosophy_title','ref_final_title'].includes(key))e.innerHTML=t(key);else e.textContent=t(key);});
  const heading=document.querySelector('.hero-content h1');
  if(heading?.dataset.i18n==='hero'){const parts=t('hero').match(/^(.+?[.!?])\s+(.+)$/);if(parts){heading.replaceChildren(document.createTextNode(parts[1]));const accent=document.createElement('span');accent.textContent=parts[2];heading.append(accent);}else if(language==='th'){heading.replaceChildren(document.createTextNode('สร้างความมั่นใจ'));const accent=document.createElement('span');accent.textContent='เปิดโอกาสใหม่';heading.append(accent);}}

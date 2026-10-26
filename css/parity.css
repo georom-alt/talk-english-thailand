@@ -42,3 +42,7 @@ html[lang=th] h1,html[lang=th] h2{letter-spacing:normal;line-height:1.35}
 @media(max-width:1300px){.main-navigation{display:none;position:absolute;top:100%;left:20px;right:20px;flex-direction:column;align-items:stretch;gap:0;padding:14px;background:white;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);max-height:calc(100dvh - 100px);overflow:auto}.main-navigation.is-open{display:flex}.main-navigation a{display:block;padding:12px}.menu-toggle{display:block;flex-shrink:0;margin-left:auto}.language-switcher{flex-shrink:0}}
 @media(max-width:760px){#pricing .pricing-grid,.two-grid{grid-template-columns:1fr}.enquiry-form{grid-template-columns:1fr}.form-full{grid-column:1}.action-row .button{max-width:100%;text-align:center}.enquiry-panel{padding:24px 18px}.hero-actions{flex-wrap:wrap}html[lang=th] .hero h1{font-size:clamp(2.2rem,8vw,3rem)}.optional-assessment{padding:14px}.section .container{min-width:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Mask Vietnamese lettering baked into the shared reference photograph. */
+.hero-overlay{background:linear-gradient(90deg,#f7fbff 0%,#f7fbff 60%,rgba(247,251,255,.94) 65%,rgba(247,251,255,.25) 78%,rgba(247,251,255,0) 100%)}
+@media(max-width:760px){.hero-overlay{background:rgba(247,251,255,.98)}}
