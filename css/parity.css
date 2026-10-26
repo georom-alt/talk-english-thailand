@@ -46,3 +46,6 @@ html[lang=th] h1,html[lang=th] h2{letter-spacing:normal;line-height:1.35}
 /* Mask Vietnamese lettering baked into the shared reference photograph. */
 .hero-overlay{background:linear-gradient(90deg,#f7fbff 0%,#f7fbff 60%,rgba(247,251,255,.94) 65%,rgba(247,251,255,.25) 78%,rgba(247,251,255,0) 100%)}
 @media(max-width:760px){.hero-overlay{background:rgba(247,251,255,.98)}}
+
+/* Reserve natural word widths in translated desktop navigation. */
+@media(min-width:1301px){.header-container{width:min(calc(100% - 40px),1280px)}.main-navigation a{min-width:min-content}}
